@@ -1,9 +1,10 @@
-import SimpleInput from './components/SimpleInput';
-
+import SimpleInput from "./components/SimpleInput";
+import SimpleInputTwo from "./components/SimpleInputTwo";
 function App() {
   return (
     <div className="app">
-      <SimpleInput />
+      {/* <SimpleInput /> */}
+      <SimpleInputTwo />
     </div>
   );
 }
