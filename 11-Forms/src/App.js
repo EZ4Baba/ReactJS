@@ -1,10 +1,14 @@
-import SimpleInput from "./components/SimpleInput";
-import SimpleInputTwo from "./components/SimpleInputTwo";
+// import SimpleInput from "./components/SimpleInput";
+// import SimpleInputTwo from "./components/SimpleInputTwo";
+import BasicForm from "./components/BasicForm";
+// import Counter from "./components/useInterval";
 function App() {
   return (
     <div className="app">
       {/* <SimpleInput /> */}
-      <SimpleInputTwo />
+      {/* <SimpleInputTwo /> */}
+      <BasicForm />
+      {/* <Counter /> */}
     </div>
   );
 }
