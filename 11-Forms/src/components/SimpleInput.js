@@ -87,7 +87,7 @@ const SimpleInput = (props) => {
 
 export default SimpleInput;
 /*
-const [enteredName, setEnteredName] = useState("");
+  const [enteredName, setEnteredName] = useState("");
   const [enteredNameTouched, setEnteredNameTouched] = useState(false);
 
   const [enteredEmail, setEnteredEmail] = useState("");

@@ -26,6 +26,7 @@ const SimpleInputTwo = (props) => {
   const formValid = nameValueValid && emailValueValid;
   const formSubmissionHandler = (event) => {
     event.preventDefault();
+    console.log(nameError, emailError);
     if (nameError) return;
 
     resetName();
