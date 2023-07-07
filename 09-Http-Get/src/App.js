@@ -38,13 +38,13 @@ function App() {
         setisLoading(false);
       });
   };
-  //this works same as
+  //this works same as +
 
   // useEffect(() => {
   //   fetchMovieHandler();
   // }, []);
 
-  //as below(cause we should add all dependancy(fetchMovieHandler) in the array of useEffect)
+  // + as below(cause we should add all dependancy(fetchMovieHandler) in the array of useEffect)
   //like this...
   //but this will cause infininte loop as fetchMovieHandler reference will be changed at each render
 
