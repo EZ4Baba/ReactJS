@@ -46,6 +46,9 @@ const CardReducer = (state, action) => {
 
     return { items: updatedItems, totalAmount: AmountToPay };
   }
+  if (action.type === "REMOVEALLITEMS") {
+    return { items: [], totalAmount: 0 };
+  }
 };
 function CartProvider(props) {
   const [cartState, dispatcher] = useReducer(CardReducer, initailCartState);
@@ -58,11 +61,16 @@ function CartProvider(props) {
     dispatcher({ type: "REMOVE", payLoad: item });
   }
 
+  function emptyCartHandler() {
+    dispatcher({ type: "REMOVEALLITEMS" });
+  }
+
   const contextValue = {
     items: cartState.items,
     totalAmount: cartState.totalAmount.toFixed(2),
     addItem: addItemHandler,
     removeItem: removeItemHandler,
+    emptyCart: emptyCartHandler,
   };
   return (
     <CartContext.Provider value={contextValue}>

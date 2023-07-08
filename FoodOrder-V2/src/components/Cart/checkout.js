@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./checkout.css";
 
-function CheckoutForm() {
+function CheckoutForm(props) {
   const [enteredName, setEnteredName] = useState("");
   const [NameTouched, setNameTouched] = useState(false);
 
@@ -55,8 +55,10 @@ function CheckoutForm() {
     setNameTouched(false);
     setAddressTouched(false);
     setPinTouched(false);
-    console.log("order is on your way");
+    setFormValidity("");
+    props.onOrderConfirmation(enteredName);
   }
+
   return (
     <form onSubmit={formHandler}>
       <div className="control">
@@ -97,7 +99,7 @@ function CheckoutForm() {
 
       {formValidity}
       <div className="actions">
-        <button>Confirm</button>
+        <button className="button">Confirm</button>
       </div>
     </form>
   );
